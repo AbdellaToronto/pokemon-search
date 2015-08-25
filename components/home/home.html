@@ -1,1 +1,5 @@
-<h1>{{home.test}}</h1>
+<div ng-repeat="(pokemonId, encounters) in home.nearlyRaw">
+
+  <h3>{{pokemonId}}</h3>
+  <pre ng-repeat="encounter in encounters">{{encounter | json}}</pre>
+</div>

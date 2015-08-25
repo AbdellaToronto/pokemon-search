@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "angular-material": "~0.10.1",
-    "angular-new-router": "~0.5.3"
+    "angular-new-router": "~0.5.3",
+    "ramda": "~0.17.1"
   }
 }
