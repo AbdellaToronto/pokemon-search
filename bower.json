@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-search",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AbdellaToronto/pokemon-search",
+  "authors": [
+    "Abdella <abdellaalioncan@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.10.1"
+  }
+}
