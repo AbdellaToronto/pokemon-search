@@ -1,7 +1,16 @@
 <input type="text" ng-model="home.locationFilter"/>
 
-<div ng-repeat="pokemon in home.allPokemon | filter:home.filterByLocation">
+<div ng-repeat="pokemon in home.allPokemon | filter:home.filterByLocation"
 
-  <pre>{{pokemon | json}}</pre>
+  ng-click="pokemon.show = !pokemon.show">
+
+  <div style="width: 200px; height: 100px; background-color: beige; border: 1px solid black; margin-bottom: 10px">
+    {{pokemon.identifier}}</div>
+
+  <ul ng-show="pokemon.show">
+    <li ng-repeat="encounter in pokemon.encounters">
+      {{encounter.locationName}}
+    </li>
+  </ul>
 
 </div>
