@@ -6,9 +6,10 @@ angular.module('pokemon-search.home', ['pokemon-search.xy-search'])
     (function (vm) {
 
       vm.filterByLocation = function(pokemon){
-        return R.containsWith(function(encounter){
-          return vm.locationFilter ? encounter.locationName === vm.locationFilter : true;
-        }, pokemon.encounters);
+        var found = R.find(function(encounter){
+          return encounter.locationName.includes(vm.locationFilter);
+        }, pokemon.encounters || []);
+        return vm.locationFilter ? found : true;
       };
 
 
