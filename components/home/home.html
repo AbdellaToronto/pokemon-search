@@ -1,4 +1,6 @@
-<div ng-repeat="pokemon in home.allPokemon">
+<input type="text" ng-model="home.locationFilter"/>
+
+<div ng-repeat="pokemon in home.allPokemon | filter:home.filterByLocation">
 
   <pre>{{pokemon | json}}</pre>
 

@@ -5,6 +5,12 @@ angular.module('pokemon-search.home', ['pokemon-search.xy-search'])
 
     (function (vm) {
 
+      vm.filterByLocation = function(pokemon){
+        return R.containsWith(function(encounter){
+          return vm.locationFilter ? encounter.locationName === vm.locationFilter : true;
+        }, pokemon.encounters);
+      };
+
 
       //Callback hell, will do better eventually, this is just quick
       //Also, these variable names are the worst
